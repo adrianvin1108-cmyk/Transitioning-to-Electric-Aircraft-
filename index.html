@@ -12,115 +12,101 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: #f4f7f9;
-  color: #1f2937;
+  background: #f8fafc;
+  color: #1e293b;
   line-height: 1.7;
 }
 
 /* HEADER */
 header {
-  background: linear-gradient(135deg, #0f172a, #0f766e, #2563eb);
+  background: #0f172a;
   color: white;
   text-align: center;
-  padding: 70px 20px 55px;
+  padding: 70px 20px;
 }
 
 header h1 {
-  font-size: 3rem;
+  font-size: 2.8rem;
   margin-bottom: 10px;
-  letter-spacing: -1px;
 }
 
 header h2 {
-  font-size: 1.25rem;
-  font-weight: 400;
-  margin-bottom: 24px;
-  color: #dbeafe;
+  font-size: 1.2rem;
+  color: #cbd5f5;
+  margin-bottom: 20px;
 }
 
 .authors {
-  font-size: 1rem;
-  opacity: 0.95;
-  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: #cbd5f5;
 }
 
 .hero-box {
-  max-width: 850px;
+  max-width: 800px;
   margin: 30px auto 0;
-  background: rgba(255, 255, 255, 0.12);
-  padding: 22px 28px;
-  border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 /* NAV */
 nav {
-  position: sticky;
-  top: 0;
-  background: #0f172a;
-  padding: 14px 20px;
+  background: white;
+  padding: 15px;
   text-align: center;
-  border-bottom: 1px solid #334155;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 nav a {
-  color: #f8fafc;
+  color: #1e293b;
   text-decoration: none;
-  margin: 0 14px;
+  margin: 0 15px;
   font-weight: 600;
 }
 
 nav a:hover {
-  color: #5eead4;
+  color: #2563eb;
 }
 
 /* MAIN */
 main {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: auto;
   padding: 40px 20px;
 }
 
 section {
   background: white;
-  margin-bottom: 30px;
-  padding: 30px;
-  border-radius: 14px;
-  box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+  margin-bottom: 25px;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
 }
 
 h2 {
-  color: #0f766e;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #e5e7eb;
-  padding-bottom: 8px;
+  color: #2563eb;
+  margin-bottom: 10px;
 }
 
 h3 {
-  color: #2563eb;
-  margin-top: 20px;
+  margin-top: 15px;
+  color: #0f172a;
 }
 
 /* CARDS */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
   margin-top: 20px;
 }
 
 .card {
-  background: #f9fafb;
-  padding: 20px;
-  border-radius: 12px;
-  border: 1px solid #e5e7eb;
+  background: #f1f5f9;
+  padding: 15px;
+  border-radius: 8px;
 }
 
 /* TABLE */
@@ -131,20 +117,21 @@ table {
 }
 
 th, td {
-  border: 1px solid #ddd;
-  padding: 12px;
+  padding: 10px;
+  border: 1px solid #e2e8f0;
 }
 
 th {
-  background: #0f766e;
+  background: #2563eb;
   color: white;
 }
 
+/* FOOTER */
 footer {
-  background: #111827;
+  background: #0f172a;
   color: white;
   text-align: center;
-  padding: 25px;
+  padding: 20px;
 }
 </style>
 </head>
@@ -157,17 +144,16 @@ footer {
 
   <p class="authors">
     Prepared for Dr. Matthew Feltman<br>
-    Technical Writing Instructor, Penn State Abington
+    Penn State Abington
   </p>
 
   <p class="authors">
-    Prepared by Adrian Vintila and Theodore Fisher<br>
+    Adrian Vintila & Theodore Fisher<br>
     April 26, 2026
   </p>
 
   <div class="hero-box">
-    This website presents a proposal for reducing aviation emissions through flight optimization, 
-    sustainable aviation fuel adoption, and long-term investment in fully electric aircraft.
+    A plan to reduce aviation emissions using better routing, cleaner fuels, and electric aircraft.
   </div>
 </header>
 
@@ -176,7 +162,7 @@ footer {
   <a href="#problem">Problem</a>
   <a href="#plan">Plan</a>
   <a href="#benefits">Benefits</a>
-  <a href="#action">Action</a>
+  <a href="#action">Conclusion</a>
 </nav>
 
 <main>
@@ -184,16 +170,16 @@ footer {
 <section id="summary">
 <h2>Executive Summary</h2>
 <p>
-Air travel is widely used but contributes heavily to emissions. This proposal presents short-term
-solutions like flight optimization and sustainable fuels, and a long-term solution of electric aircraft.
+Air travel is efficient but creates large emissions. This proposal suggests short-term fixes like
+flight optimization and SAF, and a long-term shift to electric aircraft.
 </p>
 </section>
 
 <section id="problem">
 <h2>The Problem</h2>
 <p>
-Aircraft emissions, especially contrails and CO2, significantly impact climate change. As air travel grows,
-this problem becomes more urgent.
+Aircraft emissions contribute to climate change, especially at high altitudes. As air travel grows,
+this becomes a bigger issue.
 </p>
 </section>
 
@@ -201,13 +187,13 @@ this problem becomes more urgent.
 <h2>Proposed Plan</h2>
 
 <h3>Stage 1: Flight Optimization</h3>
-<p>Adjust flight routes to reduce contrails.</p>
+<p>Change routes to reduce contrails.</p>
 
-<h3>Stage 2: Sustainable Aviation Fuel</h3>
-<p>Use cleaner fuels to reduce emissions short-term.</p>
+<h3>Stage 2: Sustainable Fuel</h3>
+<p>Use SAF to lower emissions.</p>
 
 <h3>Stage 3: Electric Aircraft</h3>
-<p>Develop fully electric commercial planes long-term.</p>
+<p>Develop fully electric commercial planes.</p>
 
 </section>
 
@@ -215,25 +201,18 @@ this problem becomes more urgent.
 <h2>Benefits</h2>
 
 <div class="cards">
-<div class="card"><h3>Lower Emissions</h3><p>Near-zero emissions during flight.</p></div>
-<div class="card"><h3>Lower Costs</h3><p>Cheaper fuel and maintenance.</p></div>
-<div class="card"><h3>Job Growth</h3><p>New engineering and tech jobs.</p></div>
-<div class="card"><h3>Better Image</h3><p>Improves airline reputation.</p></div>
+<div class="card"><h3>Lower Emissions</h3></div>
+<div class="card"><h3>Lower Costs</h3></div>
+<div class="card"><h3>More Jobs</h3></div>
+<div class="card"><h3>Better Image</h3></div>
 </div>
-
-<table>
-<tr><th>Solution</th><th>Benefit</th></tr>
-<tr><td>Flight Optimization</td><td>Quick emission reduction</td></tr>
-<tr><td>SAF</td><td>Cleaner fuel</td></tr>
-<tr><td>Electric Aircraft</td><td>No in-flight emissions</td></tr>
-</table>
 
 </section>
 
 <section id="action">
 <h2>Conclusion</h2>
 <p>
-Airlines and governments must invest now in electric aircraft technology to reduce emissions and build a sustainable future.
+Investment in electric aircraft is necessary to reduce emissions and create a sustainable future.
 </p>
 </section>
 
