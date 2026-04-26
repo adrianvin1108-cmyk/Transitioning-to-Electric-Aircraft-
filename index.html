@@ -1,501 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Transitioning to Electric Aircraft</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electric Aircraft Proposal</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+html {
+  scroll-behavior: smooth;
+}
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #f4f7f9;
-      color: #1f2937;
-      line-height: 1.7;
-    }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7f9;
+  color: #1f2937;
+  line-height: 1.7;
+}
 
-    header {
-      background: linear-gradient(135deg, #0f766e, #1d4ed8);
-      color: white;
-      text-align: center;
-      padding: 80px 20px;
-    }
+/* HEADER */
+header {
+  background: linear-gradient(135deg, #0f172a, #0f766e, #2563eb);
+  color: white;
+  text-align: center;
+  padding: 70px 20px 55px;
+}
 
-    header h1 {
-      font-size: 2.8rem;
-      margin-bottom: 12px;
-    }
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+}
 
-    header h2 {
-      font-size: 1.3rem;
-      font-weight: normal;
-      margin-bottom: 20px;
-    }
+header h2 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 24px;
+  color: #dbeafe;
+}
 
-    .authors {
-      font-size: 1rem;
-      opacity: 0.95;
-    }
+.authors {
+  font-size: 1rem;
+  opacity: 0.95;
+  margin-bottom: 10px;
+}
 
-    nav {
-      position: sticky;
-      top: 0;
-      background: #111827;
-      padding: 14px 20px;
-      text-align: center;
-      z-index: 100;
-    }
+.hero-box {
+  max-width: 850px;
+  margin: 30px auto 0;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 22px 28px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 12px;
-      font-weight: bold;
-      font-size: 0.95rem;
-    }
+/* NAV */
+nav {
+  position: sticky;
+  top: 0;
+  background: #0f172a;
+  padding: 14px 20px;
+  text-align: center;
+  border-bottom: 1px solid #334155;
+}
 
-    nav a:hover {
-      color: #93c5fd;
-    }
+nav a {
+  color: #f8fafc;
+  text-decoration: none;
+  margin: 0 14px;
+  font-weight: 600;
+}
 
-    main {
-      max-width: 1150px;
-      margin: auto;
-      padding: 40px 20px;
-    }
+nav a:hover {
+  color: #5eead4;
+}
 
-    section {
-      background: white;
-      margin-bottom: 30px;
-      padding: 32px;
-      border-radius: 14px;
-      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
-    }
+/* MAIN */
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
 
-    h2 {
-      color: #0f766e;
-      font-size: 1.8rem;
-      margin-bottom: 16px;
-      padding-bottom: 8px;
-      border-bottom: 2px solid #e5e7eb;
-    }
+section {
+  background: white;
+  margin-bottom: 30px;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+}
 
-    h3 {
-      color: #1d4ed8;
-      margin-top: 20px;
-      margin-bottom: 8px;
-    }
+h2 {
+  color: #0f766e;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 8px;
+}
 
-    p {
-      margin-bottom: 14px;
-    }
+h3 {
+  color: #2563eb;
+  margin-top: 20px;
+}
 
-    .hero-box {
-      max-width: 850px;
-      margin: 28px auto 0;
-      background: rgba(255, 255, 255, 0.16);
-      padding: 22px;
-      border-radius: 14px;
-      border: 1px solid rgba(255, 255, 255, 0.35);
-    }
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+  margin-top: 20px;
+}
 
-    .highlight-box {
-      background: #ecfeff;
-      border-left: 5px solid #0f766e;
-      padding: 18px;
-      margin-top: 18px;
-      border-radius: 8px;
-    }
+.card {
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
 
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-      margin-top: 20px;
-    }
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
 
-    .stat {
-      background: #f9fafb;
-      border: 1px solid #e5e7eb;
-      border-radius: 12px;
-      padding: 20px;
-      text-align: center;
-    }
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+}
 
-    .stat strong {
-      display: block;
-      font-size: 1.7rem;
-      color: #0f766e;
-      margin-bottom: 6px;
-    }
+th {
+  background: #0f766e;
+  color: white;
+}
 
-    .timeline {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 18px;
-      margin-top: 22px;
-    }
-
-    .step {
-      background: #eff6ff;
-      border-top: 5px solid #1d4ed8;
-      padding: 22px;
-      border-radius: 12px;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 18px;
-      margin-top: 20px;
-    }
-
-    .card {
-      background: #f9fafb;
-      border: 1px solid #e5e7eb;
-      padding: 22px;
-      border-radius: 12px;
-    }
-
-    .card h3 {
-      margin-top: 0;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 22px;
-      font-size: 0.95rem;
-    }
-
-    th, td {
-      border: 1px solid #d1d5db;
-      padding: 13px;
-      text-align: left;
-      vertical-align: top;
-    }
-
-    th {
-      background: #0f766e;
-      color: white;
-    }
-
-    tr:nth-child(even) {
-      background: #f9fafb;
-    }
-
-    ul {
-      margin-left: 24px;
-      margin-bottom: 12px;
-    }
-
-    li {
-      margin-bottom: 8px;
-    }
-
-    .sources li {
-      word-break: break-word;
-      margin-bottom: 12px;
-    }
-
-    footer {
-      background: #111827;
-      color: white;
-      text-align: center;
-      padding: 28px 20px;
-      margin-top: 30px;
-    }
-
-    @media (max-width: 700px) {
-      header h1 {
-        font-size: 2rem;
-      }
-
-      nav a {
-        display: inline-block;
-        margin: 6px 8px;
-      }
-
-      section {
-        padding: 22px;
-      }
-    }
-  </style>
+footer {
+  background: #111827;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+</style>
 </head>
 
 <body>
-  <header>
-    <h1>Transitioning to Electric Aircraft</h1>
-    <h2>A Proposal to Reduce Aviation Emissions</h2>
 
-    <p class="authors">
-      Prepared for Dr. Matthew Feltman<br />
-      Technical Writing Instructor, Penn State Abington
-    </p>
+<header>
+  <h1>Transitioning to Electric Aircraft</h1>
+  <h2>A Proposal to Reduce Aviation Emissions</h2>
 
-    <p class="authors">
-      Prepared by Adrian Vintila and Theodore Fisher<br />
-      April 26, 2026
-    </p>
+  <p class="authors">
+    Prepared for Dr. Matthew Feltman<br>
+    Technical Writing Instructor, Penn State Abington
+  </p>
 
-    <div class="hero-box">
-      <p>
-        This website presents a proposal for reducing aviation emissions through flight optimization,
-        sustainable aviation fuel adoption, and long-term investment in fully electric commercial aircraft.
-      </p>
-    </div>
-  </header>
+  <p class="authors">
+    Prepared by Adrian Vintila and Theodore Fisher<br>
+    April 26, 2026
+  </p>
 
-  <nav>
-    <a href="#summary">Summary</a>
-    <a href="#problem">Problem</a>
-    <a href="#background">Background</a>
-    <a href="#plan">Plan</a>
-    <a href="#benefits">Benefits</a>
-    <a href="#action">Action</a>
-    <a href="#sources">Sources</a>
-  </nav>
+  <div class="hero-box">
+    This website presents a proposal for reducing aviation emissions through flight optimization, 
+    sustainable aviation fuel adoption, and long-term investment in fully electric aircraft.
+  </div>
+</header>
 
-  <main>
-    <section id="summary">
-      <h2>Executive Summary</h2>
+<nav>
+  <a href="#summary">Summary</a>
+  <a href="#problem">Problem</a>
+  <a href="#plan">Plan</a>
+  <a href="#benefits">Benefits</a>
+  <a href="#action">Action</a>
+</nav>
 
-      <p>
-        Air travel is one of the most widely used and efficient forms of transportation, but it also
-        contributes significantly to global greenhouse gas emissions. Current reliance on jet fuel
-        results in carbon dioxide, nitrogen oxides, and contrail formation, all of which contribute
-        to climate change.
-      </p>
+<main>
 
-      <p>
-        This proposal examines short-term and long-term solutions to reduce aviation emissions.
-        In the short term, airlines can adjust flight routes to reduce contrail formation and increase
-        their use of sustainable aviation fuels. In the long term, the aviation industry should invest
-        in research and development for fully electric commercial aircraft.
-      </p>
+<section id="summary">
+<h2>Executive Summary</h2>
+<p>
+Air travel is widely used but contributes heavily to emissions. This proposal presents short-term
+solutions like flight optimization and sustainable fuels, and a long-term solution of electric aircraft.
+</p>
+</section>
 
-      <div class="highlight-box">
-        <strong>Main Recommendation:</strong> Airlines, aircraft manufacturers, and government agencies
-        should begin prioritizing electric aircraft research while using flight optimization and
-        sustainable aviation fuels as immediate steps.
-      </div>
-    </section>
+<section id="problem">
+<h2>The Problem</h2>
+<p>
+Aircraft emissions, especially contrails and CO2, significantly impact climate change. As air travel grows,
+this problem becomes more urgent.
+</p>
+</section>
 
-    <section id="problem">
-      <h2>The Problem</h2>
+<section id="plan">
+<h2>Proposed Plan</h2>
 
-      <p>
-        Aviation pollution is a serious issue because aircraft use large amounts of jet fuel and
-        release emissions high in the atmosphere. These emissions include carbon dioxide, nitrogen
-        oxides, and contrails. Contrails are especially important because they can trap heat and add
-        to aviation’s climate impact.
-      </p>
+<h3>Stage 1: Flight Optimization</h3>
+<p>Adjust flight routes to reduce contrails.</p>
 
-      <div class="stats">
-        <div class="stat">
-          <strong>10%</strong>
-          U.S. transportation emissions come from air travel.
-        </div>
+<h3>Stage 2: Sustainable Aviation Fuel</h3>
+<p>Use cleaner fuels to reduce emissions short-term.</p>
 
-        <div class="stat">
-          <strong>4.9%</strong>
-          Human-caused climate change is linked to global aviation.
-        </div>
+<h3>Stage 3: Electric Aircraft</h3>
+<p>Develop fully electric commercial planes long-term.</p>
 
-        <div class="stat">
-          <strong>80%</strong>
-          Aircraft fuel is often burned during cruising altitude.
-        </div>
-      </div>
-    </section>
+</section>
 
-    <section id="background">
-      <h2>Background</h2>
+<section id="benefits">
+<h2>Benefits</h2>
 
-      <h3>Jet Fuel</h3>
-      <p>
-        Most commercial aircraft in the United States use Jet A, a kerosene-based fuel. Jet fuel
-        is effective for aviation because it performs well at different temperatures and altitudes.
-        However, burning jet fuel releases greenhouse gases and other emissions that contribute to
-        climate change.
-      </p>
+<div class="cards">
+<div class="card"><h3>Lower Emissions</h3><p>Near-zero emissions during flight.</p></div>
+<div class="card"><h3>Lower Costs</h3><p>Cheaper fuel and maintenance.</p></div>
+<div class="card"><h3>Job Growth</h3><p>New engineering and tech jobs.</p></div>
+<div class="card"><h3>Better Image</h3><p>Improves airline reputation.</p></div>
+</div>
 
-      <h3>Sustainable Aviation Fuels</h3>
-      <p>
-        Sustainable aviation fuels, also known as SAFs, are made from renewable waste, organic
-        materials, and non-petroleum oils. These fuels can be blended with traditional jet fuel and
-        used in current aircraft. SAFs are promising, but they are currently expensive and limited
-        in availability.
-      </p>
-    </section>
+<table>
+<tr><th>Solution</th><th>Benefit</th></tr>
+<tr><td>Flight Optimization</td><td>Quick emission reduction</td></tr>
+<tr><td>SAF</td><td>Cleaner fuel</td></tr>
+<tr><td>Electric Aircraft</td><td>No in-flight emissions</td></tr>
+</table>
 
-    <section id="plan">
-      <h2>Proposed Plan</h2>
+</section>
 
-      <p>
-        The solution to aviation pollution requires both short-term and long-term planning. The goal
-        is to reduce emissions now while supporting the development of fully electric commercial
-        aircraft in the future.
-      </p>
+<section id="action">
+<h2>Conclusion</h2>
+<p>
+Airlines and governments must invest now in electric aircraft technology to reduce emissions and build a sustainable future.
+</p>
+</section>
 
-      <div class="timeline">
-        <div class="step">
-          <h3>Stage 1: Flight Optimization</h3>
-          <p>
-            Airlines should adjust certain flight routes to reduce contrail formation. Rerouting a
-            small percentage of flights could reduce aviation’s warming impact without completely
-            changing current aviation systems.
-          </p>
-        </div>
+</main>
 
-        <div class="step">
-          <h3>Stage 2: SAF Adoption</h3>
-          <p>
-            Airlines should increase the use of sustainable aviation fuels while electric aircraft
-            technology continues to develop. SAFs can be used with current aircraft, making them a
-            realistic short-term improvement.
-          </p>
-        </div>
+<footer>
+Final Project Website
+</footer>
 
-        <div class="step">
-          <h3>Stage 3: Electric Aircraft</h3>
-          <p>
-            The long-term goal is the creation of fully electric commercial aircraft. Smaller electric
-            aircraft already exist, but larger aircraft require stronger batteries with higher energy
-            density and lower weight.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="technical">
-      <h2>Technical Specifications and Challenges</h2>
-
-      <h3>Battery Limitations</h3>
-      <p>
-        The biggest challenge for electric aircraft is battery technology. Batteries must be powerful
-        enough to support long flights while staying light enough for aircraft safety and efficiency.
-        Current electric aircraft show that electric flight is possible, but larger commercial aircraft
-        require major improvements in battery design.
-      </p>
-
-      <h3>Hybrid Aircraft</h3>
-      <p>
-        Hybrid aircraft are a possible transition step, but they still depend partly on fuel and face
-        similar battery-weight problems. Because of this, fully electric aircraft should remain the
-        long-term goal.
-      </p>
-    </section>
-
-    <section id="benefits">
-      <h2>Benefits</h2>
-
-      <div class="cards">
-        <div class="card">
-          <h3>Lower Emissions</h3>
-          <p>
-            Electric aircraft would produce little to no emissions during flight, reducing aviation’s
-            environmental impact.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Lower Costs</h3>
-          <p>
-            Electric aircraft could lower fuel and maintenance costs because electricity is often
-            cheaper than jet fuel and electric engines have fewer moving parts.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Job Creation</h3>
-          <p>
-            Investment in electric aircraft could create jobs in engineering, manufacturing, battery
-            technology, and airport infrastructure.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Better Public Image</h3>
-          <p>
-            Airlines that adopt cleaner technology could improve their reputation and appeal to
-            environmentally conscious travelers.
-          </p>
-        </div>
-      </div>
-
-      <table>
-        <tr>
-          <th>Solution</th>
-          <th>Main Benefit</th>
-          <th>Main Challenge</th>
-        </tr>
-
-        <tr>
-          <td>Flight Optimization</td>
-          <td>Can reduce contrail formation quickly.</td>
-          <td>Requires detailed tracking and route planning.</td>
-        </tr>
-
-        <tr>
-          <td>Sustainable Aviation Fuel</td>
-          <td>Can be used in current aircraft.</td>
-          <td>High cost and limited availability.</td>
-        </tr>
-
-        <tr>
-          <td>Electric Aircraft</td>
-          <td>Could remove in-flight emissions.</td>
-          <td>Battery weight and energy density.</td>
-        </tr>
-      </table>
-    </section>
-
-    <section id="action">
-      <h2>Conclusion and Request for Action</h2>
-
-      <p>
-        Air travel is important, but the aviation industry must address its environmental impact.
-        Short-term solutions such as rerouting flights and adopting sustainable aviation fuels can
-        help reduce emissions, but they do not completely solve the problem.
-      </p>
-
-      <p>
-        Airlines, aircraft manufacturers, and government agencies must begin investing immediately
-        in fully electric commercial aircraft. This includes funding research in battery technology,
-        aircraft design, and charging infrastructure. By taking action now, the aviation industry can
-        reduce emissions, lower long-term costs, and prepare for a more sustainable future.
-      </p>
-    </section>
-
-    <section id="sources">
-      <h2>Selected Works Cited</h2>
-
-      <ul class="sources">
-        <li>Abdalla, Nahda. “What Effect Is Global Aviation Having on the Environment?” <em>Phys.org</em>.</li>
-        <li>Environmental and Energy Study Institute. “The Growth in Greenhouse Gas Emissions from Commercial Aviation.”</li>
-        <li>EPA. “Electric Vehicle Myths.” United States Environmental Protection Agency.</li>
-        <li>U.S. Department of Energy. “Alternative Fuels Data Center: Electric Vehicle Benefits and Considerations.”</li>
-        <li>U.S. Department of Energy. “Alternative Fuels Data Center: Sustainable Aviation Fuel.”</li>
-        <li>Crawford, Iris. “How Much CO2 Is Emitted by Manufacturing Batteries?” MIT Climate Portal.</li>
-        <li>Pipistrel. “Velis Electro.”</li>
-        <li>Diamond Aircraft. “EDA40 - All Electric Aircraft.”</li>
-        <li>Wang, Bofan, et al. “Sustainable Aviation Fuels: Key Opportunities and Challenges in Lowering Carbon Emissions for Aviation Industry.”</li>
-      </ul>
-    </section>
-  </main>
-
-  <footer>
-    <p>Transitioning to Electric Aircraft | Final Project Website</p>
-  </footer>
 </body>
 </html>
